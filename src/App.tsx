@@ -3,6 +3,7 @@
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/Layout.tsx";
+import Counter from "./components/LessonFour/Counter.tsx";
 
 // type PropsA = {
 //   title: string,
@@ -60,12 +61,17 @@ function App() {
             {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
             {/*/>*/}
 
-            <Layout addClasses="text-blue-600 bg-gray-100">
-                {/*<ArrowFunctionalComponentWithProps*/}
-                {/*  title="Second Title"*/}
-                {/*  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
-                {/*/>*/}
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, reiciendis.</p>
+            {/*<Layout addClasses="bg-gray-100">*/}
+            {/*  <ArrowFunctionalComponentWithProps*/}
+            {/*    title="Second Title"*/}
+            {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
+            {/*  />*/}
+            {/*</Layout>*/}
+
+            {/*LESSON FOUR*/}
+            <Layout addClasses="bg-gray-50">
+                <Counter/>
+                <Counter/>
             </Layout>
 
         </>
