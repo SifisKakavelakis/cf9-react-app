@@ -3,11 +3,14 @@
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/Layout.tsx";
+import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
 // import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 // import NameChanger from "./components/LessonFive/NameChanger.tsx";
-import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
+// import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
+// import {useEffect} from "react";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
+// import {useState} from "react";
 
 // type PropsA = {
 //   title: string,
@@ -46,7 +49,20 @@ import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook
 // }
 // // PropsThree = {title, description, price, sort, image}
 
+// function setup() {
+//   alert("count")
+// }
+//
+// useEffect(setup, [count])
+
+
+
 function App() {
+
+    // useEffect(() => {
+    //     alert("Hello World!");
+    //   }
+    //   )
 
     return (
         <>
@@ -61,10 +77,9 @@ function App() {
             {/*LESSON THREE*/}
             {/*<ArrowFunctionalComponentWithProps title="Heading 1"/>*/}
             {/*<ArrowFunctionalComponentWithProps*/}
-            {/*    title="Second Title"*/}
-            {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
+            {/*  title="Second Title"*/}
+            {/*  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
             {/*/>*/}
-
             {/*<Layout addClasses="bg-gray-100">*/}
             {/*  <ArrowFunctionalComponentWithProps*/}
             {/*    title="Second Title"*/}
@@ -74,17 +89,17 @@ function App() {
 
             {/*LESSON FOUR*/}
             {/*<Layout addClasses="bg-gray-50">*/}
-                {/*<Counter/>*/}
-                {/*<ClassCounter/>*/}
-            {/*    <CounterAdvanced/>*/}
+            {/*  /!*<Counter/>*!/*/}
+            {/*  /!*<ClassCounter/>*!/*/}
+            {/*  <CounterAdvanced/>*/}
             {/*</Layout>*/}
 
             {/*LESSON FIVE*/}
             <Layout addClasses="bg-gray-50">
                 {/*<NameChanger/>*/}
-                <CounterWithCustomHook/>
+                {/*<CounterWithCustomHook/>*/}
+                <NameChangerWithTitle />
             </Layout>
-
         </>
     )
 }
