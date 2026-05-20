@@ -3,10 +3,11 @@
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/Layout.tsx";
+import FocusInput from "./components/LessonSix/FocusInput.tsx";
 // import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
 // import AutoRedirect from "./components/LessonSix/AutoRedirect.tsx";
 // import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
-import WindowSize from "./components/LessonSix/WindowSize.tsx";
+// import WindowSize from "./components/LessonSix/WindowSize.tsx";
 // import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 // import NameChanger from "./components/LessonFive/NameChanger.tsx";
 // import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
@@ -108,7 +109,8 @@ function App() {
             <Layout addClasses="bg-gray-50">
                 {/*<AutoRedirect />*/}
                 {/*<AutoRedirectAdvanced />*/}
-                <WindowSize/>
+                {/*<WindowSize/>*/}
+                <FocusInput/>
             </Layout>
 
         </>
