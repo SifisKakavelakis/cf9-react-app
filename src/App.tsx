@@ -3,7 +3,8 @@
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/Layout.tsx";
-import FocusInput from "./components/LessonSix/FocusInput.tsx";
+// import FocusInput from "./components/LessonSix/FocusInput.tsx";
+import PreviewsValue from "./components/LessonSix/PreviewsValue.tsx";
 // import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
 // import AutoRedirect from "./components/LessonSix/AutoRedirect.tsx";
 // import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
@@ -110,7 +111,8 @@ function App() {
                 {/*<AutoRedirect />*/}
                 {/*<AutoRedirectAdvanced />*/}
                 {/*<WindowSize/>*/}
-                <FocusInput/>
+                {/*<FocusInput/>*/}
+                <PreviewsValue/>
             </Layout>
 
         </>
