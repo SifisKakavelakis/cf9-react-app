@@ -2,7 +2,7 @@
 // import ClassComponent from "./components/LessonTwo/ClassComponent.tsx";
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
-import Layout from "./components/Layout.tsx";
+import Layout from "../../react-todo-app/src/shared/layout/Layout.tsx";
 // import FocusInput from "./components/LessonSix/FocusInput.tsx";
 import PreviewsValue from "./components/LessonSix/PreviewsValue.tsx";
 // import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
