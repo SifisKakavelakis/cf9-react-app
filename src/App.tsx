@@ -2,9 +2,16 @@
 // import ClassComponent from "./components/LessonTwo/ClassComponent.tsx";
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
-import Layout from "../../react-todo-app/src/shared/layout/Layout.tsx";
+// import Layout from "../../react-todo-app/src/shared/layout/Layout.tsx";
 // import FocusInput from "./components/LessonSix/FocusInput.tsx";
-import PreviewsValue from "./components/LessonSix/PreviewsValue.tsx";
+// import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
+// import {useEffect} from "react";
+import {Route, Routes} from "react-router";
+import NameChanger from "./components/LessonFive/NameChanger.tsx";
+import HomePage from "./pages/HomePage.tsx";
+import Counter from "./components/LessonFour/Counter.tsx";
+import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
+import RouterLayout from "./components/RouterLayout.tsx";
 // import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
 // import AutoRedirect from "./components/LessonSix/AutoRedirect.tsx";
 // import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
@@ -69,6 +76,10 @@ function App() {
     //   }
     //   )
 
+    // useEffect(() => {
+    //   history.pushState({}, "", "/about");
+    // }, []);
+
     return (
         <>
             {/*LESSON TWO*/}
@@ -107,13 +118,60 @@ function App() {
             {/*</Layout>*/}
 
             {/*LESSON FIVE*/}
-            <Layout addClasses="bg-gray-50">
-                {/*<AutoRedirect />*/}
-                {/*<AutoRedirectAdvanced />*/}
-                {/*<WindowSize/>*/}
-                {/*<FocusInput/>*/}
-                <PreviewsValue/>
-            </Layout>
+            {/*<Layout addClasses="bg-gray-50">*/}
+            {/*  /!*<NameChanger/>*!/*/}
+            {/*  /!*<CounterWithCustomHook/>*!/*/}
+            {/*  <NameChangerWithTitle />*/}
+            {/*</Layout>*/}
+
+            {/*  LESSON SIX  */}
+            {/*  <Layout addClasses="bg-gray-50">*/}
+            {/*    /!*<AutoRedirect />*!/*/}
+            {/*    /!*<AutoRedirectAdvanced />*!/*/}
+            {/*    /!*<WindowSize/>*!/*/}
+            {/*    /!*<FocusInput />*!/*/}
+            {/*    <PreviousValue/>*/}
+            {/*  </Layout>*/}
+
+            {/*LESSON SEVEN*/}
+            {/*<Routes>*/}
+            {/*  <Route index element={<HomePage />} />*/}
+            {/*  /!*<Route path="/" element={<HomePage />} />*!/*/}
+            {/*  <Route path="name-changer" element={<NameChanger />} />*/}
+            {/*  <Route path="counter" element={<Counter />} />*/}
+            {/*  <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
+            {/*</Routes>*/}
+
+            {/*/*/}
+            {/*/examples/*/}
+            {/*/examples/name-changer*/}
+            {/*/examples/counter*/}
+            {/*/examples/counter-advanced*/}
+
+            <Routes>
+                <Route element={<RouterLayout />}>
+                    <Route index element={<HomePage />} />
+                    {/*<Route path="examples?">*/}
+                    <Route path="examples">
+                        <Route index element={<NameChanger />} />
+                        <Route path="name-changer" element={<NameChanger />} />
+                        <Route path="counter" element={<Counter />} />
+                        <Route path="counter-advanced" element={<CounterAdvanced />} />
+                    </Route>
+                </Route>
+
+                {/*<Route path="users">*/}
+                {/*  <Route index element={<UserListPage />} />*/}
+                {/*  <Route path=":userId" element={<UserPage />} />*/}
+                {/*</Route>*/}
+
+                {/* /files/* */}
+                {/*<Route path="files/*" element={<File />} />*/}
+                {/*let params = useParams();*/}
+                {/*let filepath = params["*"]*/}
+                {/*<Route path="*" element={<NotFoundPage />} />*/}
+
+            </Routes>
 
         </>
     )
