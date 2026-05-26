@@ -16,6 +16,7 @@ import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
+import MultiFieldFormWithValidationWithZod from "./components/LessonTen/MultiFieldFormWithValidationWithZod.tsx";
 // import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
 // import AutoRedirect from "./components/LessonSix/AutoRedirect.tsx";
 // import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
@@ -172,6 +173,7 @@ function App() {
 
                     <Route path="multifield-form" element={<MultiFieldForm/>}/>
                     <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation/>}/>
+                    <Route path="multifield-form-zod" element={<MultiFieldFormWithValidationWithZod/>}/>
 
                 </Route>
                 {/* /files/* */}
