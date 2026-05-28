@@ -9,9 +9,9 @@ const Header = () => {
                         <img src="https://codingfactory.aueb.gr/sites/all/themes/cf_theme/logo.png"
                              alt="cf-logo" className="my-4 h-16"/>
                     </Link>
-
                     <nav className="flex gap-4 text-white font-medium">
                         <Link to="/">Home</Link>
+                        <Link to="/products">Products</Link>
                     </nav>
                 </div>
             </header>
