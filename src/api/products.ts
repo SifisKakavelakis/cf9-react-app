@@ -4,7 +4,7 @@ const API_URL = import.meta.env.VITE_API_URL
 const TENANT_ID = import.meta.env.VITE_TENANT_ID
 
 export async function getProducts(): Promise<Product[]> {
-    const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/`)
+    const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/`)
     if (!res.ok) throw new Error("Failed to fetch products")
     const data = await res.json()
     console.log("products res: " + data)
@@ -12,7 +12,7 @@ export async function getProducts(): Promise<Product[]> {
 }
 
 export async function getProduct(id: number): Promise<Product> {
-    const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/${id}`);
+    const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/${id}`);
     if (!res.ok) throw new Error("Failed to fetch product")
     return await res.json()
 }
@@ -30,7 +30,7 @@ export async function updateProduct(
         sort: number;
     },
 ) {
-    const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
+    const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data),
@@ -40,7 +40,7 @@ export async function updateProduct(
 }
 
 export async function createProduct(data: Omit<Product, "id">): Promise<Product> {
-    const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/`, {
+    const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data),
@@ -50,7 +50,7 @@ export async function createProduct(data: Omit<Product, "id">): Promise<Product>
 }
 
 export async function deleteProduct(id: number): Promise<void> {
-    const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
+    const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
         method: "DELETE",
     })
     if (!res.ok) throw new Error("Failed to delete product")
