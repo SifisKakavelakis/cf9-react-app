@@ -2,7 +2,15 @@
 // import ClassComponent from "./components/LessonTwo/ClassComponent.tsx";
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
-// import Layout from "../../react-todo-app/src/shared/layout/Layout.tsx";
+// import Layout from "./components/Layout.tsx";
+// import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
+// import NameChanger from "./components/LessonFive/NameChanger.tsx";
+// import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
+// import {useEffect} from "react";
+// import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
+// import AutoRedirect from "./components/LessonSix/AutoRedirect.tsx";
+// import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
+// import WindowSize from "./components/LessonSix/WindowSize.tsx";
 // import FocusInput from "./components/LessonSix/FocusInput.tsx";
 // import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
 // import {useEffect} from "react";
@@ -16,18 +24,9 @@ import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
-import MultiFieldFormWithValidationWithZod from "./components/LessonTen/MultiFieldFormWithValidationWithZod.tsx";
-import MultiFieldFormWithValidationWithHookForm
-    from "./components/LessonTen/MultiFieldFormWithValidationWithHookForm.tsx";
+import MultiFieldFormWithZod from "@/components/LessonTen/MultiFieldFormWithValidationWithZod.tsx";
+import MultiFieldFormWithHookForm from "@/components/LessonTen/MultiFieldFormWithValidationWithHookForm.tsx";
 import ProductListPage from "./pages/ProductListPage.tsx";
-// import NameChangerWithTitle from "./components/LessonFive/NameChangerWithTitle.tsx";
-// import AutoRedirect from "./components/LessonSix/AutoRedirect.tsx";
-// import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
-// import WindowSize from "./components/LessonSix/WindowSize.tsx";
-// import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
-// import NameChanger from "./components/LessonFive/NameChanger.tsx";
-// import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
-// import {useEffect} from "react";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 // import {useState} from "react";
@@ -84,6 +83,7 @@ function App() {
     //   }
     //   )
 
+
     // useEffect(() => {
     //   history.pushState({}, "", "/about");
     // }, []);
@@ -116,13 +116,6 @@ function App() {
             {/*  /!*<Counter/>*!/*/}
             {/*  /!*<ClassCounter/>*!/*/}
             {/*  <CounterAdvanced/>*/}
-            {/*</Layout>*/}
-
-            {/*LESSON FIVE*/}
-            {/*<Layout addClasses="bg-gray-50">*/}
-            {/*    /!*<NameChanger/>*!/*/}
-            {/*    /!*<CounterWithCustomHook/>*!/*/}
-            {/*    <NameChangerWithTitle />*/}
             {/*</Layout>*/}
 
             {/*LESSON FIVE*/}
@@ -161,23 +154,27 @@ function App() {
                     <Route index element={<HomePage />} />
                     {/*<Route path="examples?">*/}
                     {/*<Route path="examples">*/}
-                    {/*    <Route index element={<NameChanger />} />*/}
-                    {/*    <Route path="name-changer" element={<NameChanger />} />*/}
-                    {/*    <Route path="counter" element={<Counter />} />*/}
-                    {/*    <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
+                    {/*  <Route index element={<NameChanger />} />*/}
+                    {/*  <Route path="name-changer" element={<NameChanger />} />*/}
+                    {/*  <Route path="counter" element={<Counter />} />*/}
+                    {/*  <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
                     {/*</Route>*/}
 
-                <Route path="users">
-                  {/*<Route index element={<UserListPage />} />*/}
-                  <Route path=":userId" element={<UserPage />} />
-                </Route>
+                    <Route path="users">
+                        {/*<Route index element={<UserListPage />} />*/}
+                        <Route path=":userId" element={<UserPage />} />
+                        {/*  /users/15  Path Params  */}
+                        {/*  /users?id=15  Query Params  */}
+                        {/*  /users?page=2&sort=asc  Query Params  */}
+                    </Route>
 
-                    <Route path="search" element={<SearchPage/>} />
+                    <Route path="search" element={<SearchPage />} />
+                    {/*  /search?query=React&page=2  Query Params  */}
 
                     <Route path="multifield-form" element={<MultiFieldForm/>}/>
                     <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation/>}/>
-                    <Route path="multifield-form-zod" element={<MultiFieldFormWithValidationWithZod/>}/>
-                    <Route path="multifield-form-hook-form" element={<MultiFieldFormWithValidationWithHookForm/>}/>
+                    <Route path="multifield-form-zod" element={<MultiFieldFormWithZod/>}/>
+                    <Route path="multifield-form-hook-form" element={<MultiFieldFormWithHookForm/>}/>
 
                     <Route path="products">
                         <Route index element={<ProductListPage />} />
